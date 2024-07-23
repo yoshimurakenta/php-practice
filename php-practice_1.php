@@ -70,7 +70,7 @@ $pref =
     '群馬県' => '前橋市'
     ];
 
-foreach ($pref as $key => $value) {
+foreach ($pref as => $value) {
     echo "$value \n";
 }
 
@@ -92,6 +92,7 @@ foreach ($pref as $key => $value)
     if($key === '埼玉県')
     {
         echo  $key. 'の県庁所在地'.$value. 'はです。';
+        break;
     }
 }
 
@@ -123,17 +124,17 @@ foreach ($pref as $key => $value)
 // Q10 関数-1
 
 
-function hello($name = '斎藤')
+function hello($name)
 {
     echo $name . 'さん、こんにちは。' . "\n";
 }
 
-function hello2($name = '吉村')
+function hello2($name)
 {
     echo $name . 'さん、こんにちは。';
 }
-hello();
-hello2();
+hello('斎藤');
+hello2('吉村');
 
 
 // Q11 関数-2
@@ -142,27 +143,28 @@ hello2();
 function calcTaxInPrice($price)
 {
     $toxInPrice = $price*1.10;
-    echo $price . '円の商品の税込み価格は' . $toxInPrice . '円です。';
+    return $price . '円の商品の税込み価格は' . $toxInPrice . '円です。';
 }
 
-calcTaxInPrice(1000);
-
+$message = calcTaxInPrice(1000);
+echo($message);
 
 // Q12 関数とif文
 
 
 function distinguishNum($num)
 {
-  if($num % 2 === 0){
-    echo $num . 'は偶数です。' . "\n";
+  if($num % 2 === 1){
+     echo $num . 'は奇数です。' . "\n";
   } else {
-    echo $num . 'は奇数です。' . "\n";
+    return $num . 'は偶数です。' . "\n";
   }
 }
 
-distinguishNum(11);
-distinguishNum(24);
+$number =distinguishNum(11);
+$number = distinguishNum(24);
 
+ echo($number);
 
 // Q13 関数とswitch文
 
@@ -187,14 +189,14 @@ function evaluateGrade($scores)
         
         
         default:
-            echo '判定不明です。講師に問い合わせてください。'. "\n";
+            return '判定不明です。講師に問い合わせてください。'. "\n";
             break;
     }
     
     
 }
 
-evaluateGrade('A');
-evaluateGrade('E');
-
+$score = evaluateGrade('A');
+$score = evaluateGrade('E');
+echo ($score);
 ?>
