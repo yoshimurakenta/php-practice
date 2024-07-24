@@ -142,8 +142,8 @@ hello2('吉村');
 
 function calcTaxInPrice($price)
 {
-    $toxInPrice = $price*1.10;
-    return $price . '円の商品の税込み価格は' . $toxInPrice . '円です。';
+    $taxInPrice = $price*1.10;
+    return $price . '円の商品の税込み価格は' . $taxInPrice . '円です。';
 }
 
 $message = calcTaxInPrice(1000);
@@ -155,7 +155,7 @@ echo($message);
 function distinguishNum($num)
 {
   if($num % 2 === 1){
-     echo $num . 'は奇数です。' . "\n";
+    echo $num . 'は奇数です。' . "\n";
   } else {
     return $num . 'は偶数です。' . "\n";
   }
@@ -175,7 +175,7 @@ function evaluateGrade($scores)
             echo '合格です。' . "\n";
             break;
             
-         case 'B':
+        case 'B':
             echo '合格です。' . "\n";
             break;
             
@@ -183,7 +183,7 @@ function evaluateGrade($scores)
             echo '合格ですが追加課題があります。'. "\n";
             break;
         
-                case 'D':
+        case 'D':
             echo '不合格です。'. "\n";
             break;
         
