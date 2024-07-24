@@ -5,13 +5,13 @@
 for($i =1; $i <=100;$i++){
   $count = $i;
   if($i % 4 ===0 && $i % 5 ===0){
-      $count = "tic-tac";
+        $count = "tic-tac";
       } elseif ($i % 4 ===0) {
-          $count = "tic";
+        $count = "tic";
       } elseif ($i % 5===0) {
-          $count = "tac";
+        $count = "tac";
       }
-          echo $count . "\n";
+        echo $count . "\n";
   
   }
 
@@ -112,15 +112,12 @@ $yamada->attend('PHP');
 //問題①
 
 $date = new DateTime();
-$date -> modify('-1month');
-echo $date ->format('Y.m.d');
+echo $date -> modify('-1month')->format('Y.m.d');
 
 //問題② 
 
 $dete = new DateTime('');
 $date2 = new DateTime('1992-04-25');
 
-$diff = $date->diff($date2);
-echo $diff->format('あの日から%a日経過しました。');
-
+echo $diff = $date->diff($date2) -> format('あの日から%a日経過しました。');
 ?>
