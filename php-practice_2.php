@@ -112,7 +112,7 @@ $yamada->attend('PHP');
 //問題①
 
 $date = new DateTime();
-echo $date -> modify('-1month')->format('Y.m.d');
+echo $date->modify('-1month')->format('Y.m.d');
 
 //問題② 
 
@@ -120,5 +120,5 @@ $date = new DateTime('');
 $date2 = new DateTime('1992-04-25');
 
 $diff = $date;
-echo $date -> diff($date2) -> format('あの日から%a日経過しました。');
+echo $date->diff($date2)->format('あの日から%a日経過しました。');
 ?>
