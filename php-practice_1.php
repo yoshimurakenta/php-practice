@@ -140,31 +140,37 @@ hello2('吉村');
 // Q11 関数-2
 
 
+$price = 1000;
 function calcTaxInPrice($price)
 {
-    $taxInPrice = $price*1.10;
-    return $price . '円の商品の税込み価格は' . $taxInPrice . '円です。';
+    $tax = $price*1.10;
+    return $tax;
 }
 
-$message = calcTaxInPrice(1000);
-echo($message);
 
+
+$taxInPrice = calcTaxInPrice($price);
+
+echo $price. '円の商品の税込価格は'. $taxInPrice . '円です。';
 // Q12 関数とif文
 
 
 function distinguishNum($num)
 {
   if($num % 2 === 1){
-    echo $num . 'は奇数です。' . "\n";
-  } else {
+    return $num . 'は奇数です。' . "\n";
+  }
+  if($num % 2 === 0){
     return $num . 'は偶数です。' . "\n";
   }
 }
 
-$number =distinguishNum(11);
-$number = distinguishNum(24);
+$number =  distinguishNum(11);
+$number2 = distinguishNum(24);
 
- echo($number);
+echo($number);
+echo($number2);
+
 
 // Q13 関数とswitch文
 
