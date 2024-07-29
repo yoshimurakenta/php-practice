@@ -143,8 +143,7 @@ hello2('吉村');
 $price = 1000;
 function calcTaxInPrice($price)
 {
-    $tax = $price*1.10;
-    return $tax;
+    return $price * 1.10;
 }
 
 
@@ -152,6 +151,7 @@ function calcTaxInPrice($price)
 $taxInPrice = calcTaxInPrice($price);
 
 echo $price. '円の商品の税込価格は'. $taxInPrice . '円です。';
+
 // Q12 関数とif文
 
 
@@ -159,8 +159,7 @@ function distinguishNum($num)
 {
   if($num % 2 === 1){
     return $num . 'は奇数です。' . "\n";
-  }
-  if($num % 2 === 0){
+  } else {
     return $num . 'は偶数です。' . "\n";
   }
 }
