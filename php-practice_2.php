@@ -116,8 +116,9 @@ echo $date -> modify('-1month')->format('Y.m.d');
 
 //問題② 
 
-$dete = new DateTime('');
+$date = new DateTime('');
 $date2 = new DateTime('1992-04-25');
 
-echo $diff = $date->diff($date2) -> format('あの日から%a日経過しました。');
+$diff = $date;
+echo $date -> diff($date2) -> format('あの日から%a日経過しました。');
 ?>
