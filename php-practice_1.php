@@ -134,13 +134,9 @@ function hello($name)
     echo $name . 'さん、こんにちは。' . "\n";
 }
 
-function hello2($name)
-{
-    echo $name . 'さん、こんにちは。';
-}
-hello('斎藤');
-hello2('吉村');
 
+hello('斎藤');
+hello('吉村');
 
 // Q11 関数-2
 
