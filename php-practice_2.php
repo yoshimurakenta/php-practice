@@ -66,21 +66,24 @@ class Student
     public $studentId;
     public $studentName;
 
-    public function __construct($id, $name)
-    {
-        $this->studentId = $id;
-        $this->studentName = $name;
-    }
+    // public function __construct($id, $name)
+    // {
+    //     $this->studentId = $id;
+    //     $this->studentName = $name;
+    // }
 
     public function attend()
     {
         echo '授業に出席しました。';
     }
 }
-$id = 120;
-$name = '山田';
-echo '学籍番号' . $id . 'は'. $name . 'です。';
+$yamada = new Student('120' , '山田');
+echo $yamada -> studentId;
+echo $yamada -> studentName;
 
+echo '学籍番号' . $yamada->studentId . 'は'. $yamada->studentName . 'です。';
+
+//コンストラクタのメリットをかく
  
 
 // Q4 オブジェクト-2
@@ -111,14 +114,16 @@ $yamada->attend('PHP');
 
 //問題①
 
-$date = new DateTime();
-echo $date->modify('-1month')->format('Y.m.d');
+$date = new DateTime(); //deteTimeインスタンス　データ型オブジェクト
+echo $date->modify('-1month')->format('Y.m.d'); //プロパティの値を変更　var_dumpで確認
 
 //問題② 
 
 $date = new DateTime('');
 $date2 = new DateTime('1992-04-25');
 
-$diff = $date;
 echo $date->diff($date2)->format('あの日から%a日経過しました。');
 ?>
+
+<!-- メソッドチェーンはオブジェクトが連なってるとできる。 -->
+
