@@ -1,11 +1,12 @@
 <?php
 // Q1 変数と文字列
 
-$message = '「吉村」';
+$message = '「吉村」'; //$name
 
 $newMessage = '私の名前は' . $message . 'です。';
-echo $newMessage;
+$newMessage = '私の苗字は' . $message . 'です。';
 
+保守性：開発が終わってリリースしたあと
 
 // Q2 四則演算
 
@@ -31,7 +32,7 @@ echo $newTime;
 
 $device = 'mac';
 
-if($device==='mac' || 'windows')
+if($device==='mac' || $device === 'windows') 文字列だけだとture キャスト
 {
     echo '使用OSは' . $device . 'です。';
 } else {
@@ -75,7 +76,7 @@ $pref =
     '群馬県' => '前橋市'
     ];
 
-foreach ($pref as => $value) {
+foreach ($pref as $value) {
     echo "$value \n";
 }
 
@@ -146,12 +147,13 @@ function calcTaxInPrice($price)
 {
     return $price * 1.10;
 }
-
-
+変数は値の再利用性
+関数の場合は処理や振る舞いの再利用性
 
 $taxInPrice = calcTaxInPrice($price);
 
 echo $price. '円の商品の税込価格は'. $taxInPrice . '円です。';
+
 
 // Q12 関数とif文
 
@@ -160,9 +162,9 @@ function distinguishNum($num)
 {
   if($num % 2 === 1){
     return $num . 'は奇数です。' . "\n";
-  } else {
-    return $num . 'は偶数です。' . "\n";
-  }
+  } 
+  return $num . 'は偶数です。' . "\n";
+  
 }
 
 $number =  distinguishNum(11);
@@ -206,3 +208,4 @@ $score = evaluateGrade('A');
 $score = evaluateGrade('E');
 echo ($score);
 ?>
+
